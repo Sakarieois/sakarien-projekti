@@ -72,6 +72,65 @@
        
        
        <button type="submit">Lähetä</button>
+       <button id="commentButton">Kommentoi</button>
+
+    <dialog id="commentDialog">
+        <form method="dialog">
+            <h2>Uuden viestin luontilomake</h2>
+            <div>
+                <label for="email">Sähköposti:</label>
+                <input type="email" name="email" id="email" required>
+            </div>
+            <div>
+                <label for="birthday">Syntymäpäiväsi:</label>
+                <input type="date" name="birthday" id="birthday" required>
+            </div>
+            <legend>Hyväksytkö, että tietojasi käytetään markkinointiin?</legend>
+            <div>
+                <input type="checkbox" id="acceptMarketing">
+                <label for="acceptMarketing">Kyllä</label>
+            </div>
+            <div>
+                <input type="checkbox" id="denyMarketing">
+                <label for="denyMarketing">Ei</label>
+            </div>
+            
+            <div>
+                <label for="pet-select">Valitse kysymys tai kommentti:</label>
+                <select name="commentType" id="pet-select">
+                    <option value="">Valitse</option>
+                    <option value="kysymys">Kysymys</option>
+                    <option value="kommentti">Kommentti</option>
+                </select>
+            </div>
+            
+            <div>
+                <label for="message">Kommentoi:</label>
+                <textarea id="message" name="textarea" rows="5" cols="30" minlength="10" maxlength="200" placeholder="Kirjoita kommentti tai kysymys tähän..." required></textarea>
+            </div>
+            
+            <button type="submit">Lähetä</button>
+            <button type="button" id="closeButton">Peruuta</button>
+        </form>
+    </dialog>
+
+    <script>
+        const commentButton = document.getElementById('commentButton');
+        const commentDialog = document.getElementById('commentDialog');
+        const closeButton = document.getElementById('closeButton');
+
+    
+        commentButton.addEventListener('click', function() {
+            commentDialog.showModal();
+        });
+
+    
+        closeButton.addEventListener('click', function() {
+            commentDialog.close();
+        });
+    </script>
+</body>
+</html>
     
 
 
@@ -84,7 +143,7 @@
     <article>
 
         <h1>Kommentti</h1>
-        <p>KÃ¤vin kaupassa ja siellä oli erinomainen lohifile tarjous</p>
+        <p>Kävin kaupassa ja siellä oli erinomainen lohifile tarjous</p>
         <h1>Sähköposti</h1>
         <p>jaakko1@gmail.com</p>
         <h1>Päivämäärä</h1>
@@ -98,7 +157,7 @@
         <p>mistä toi lohifile tarjous löytyy</p>
         <h1>Säköposti</h1>
         <p>heidi.121@gmail.com</p>
-        <p>kÃ¤vin eilen lähikaupassani k supermarkettissa enkä löytänyt tätä tarjousta</p>
+        <p>kävin eilen lähikaupassani k supermarkettissa enkä löytänyt tätä tarjousta</p>
         <h1>Päivämäärä</h1>
         <p>27.8.2023</p>
         <h1>Kellonaika</h1>
@@ -117,7 +176,7 @@
     
     
         <h1>Kommenti4</h1>
-        <p>Kiitos lÃ¶ysin erinomainen tarjous</p>
+        <p>Kiitos löysin erinomainen tarjous</p>
         <h1>Sähköposti</h1>
         <p>heidi.121@gmail.com</p>
         <h1>Päivämäärä</h1>
@@ -128,7 +187,7 @@
 
     
         <h1>kommenti5</h1>
-        <p>no moi lÃ¶ytyykÃ¶ toi tarjous vielÃ¤</p>
+        <p>no moi löytyykkö toi tarjous vielä</p>
         <h1>Sähköposti</h1>
         <p>pekka.lahtinen@gmail.com</p>
         <h1>Päivämäärä</h1>

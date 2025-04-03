@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keskustelusivu</title>
+</head>
+<body>
+    <nav>
+        <a href="index.html">CV</a> 
+        <a href="Työkokemus.html">Työkokemus</a>
+        <a href="./portfolio-sivu/portfolio.html">Portfolio</a>
+    </nav>
+
+    <h1>Tervetuloa keskustelusivulle!</h1>
+
+    <button id="commentButton">Kommentoi</button>
+
+    <dialog id="commentDialog">
+        <form method="dialog">
+            <h2>Uuden viestin luontilomake</h2>
+            <div>
+                <label for="email">Sähköposti:</label>
+                <input type="email" name="email" id="email" required>
+            </div>
+            <div>
+                <label for="birthday">Syntymäpäiväsi:</label>
+                <input type="date" name="birthday" id="birthday" required>
+            </div>
+            <legend>Hyväksytkö, että tietojasi käytetään markkinointiin?</legend>
+            <div>
+                <input type="checkbox" id="acceptMarketing">
+                <label for="acceptMarketing">Kyllä</label>
+            </div>
+            <div>
+                <input type="checkbox" id="denyMarketing">
+                <label for="denyMarketing">Ei</label>
+            </div>
+            
+            <div>
+                <label for="pet-select">Valitse kysymys tai kommentti:</label>
+                <select name="commentType" id="pet-select">
+                    <option value="">Valitse</option>
+                    <option value="kysymys">Kysymys</option>
+                    <option value="kommentti">Kommentti</option>
+                </select>
+            </div>
+            
+            <div>
+                <label for="message">Kommentoi:</label>
+                <textarea id="message" name="textarea" rows="5" cols="30" minlength="10" maxlength="200" placeholder="Kirjoita kommentti tai kysymys tähän..." required></textarea>
+            </div>
+            
+            <button type="submit">Lähetä</button>
+            <button type="button" id="closeButton">Peruuta</button>
+        </form>
+    </dialog>
+
+    <script>
+        const commentButton = document.getElementById('commentButton');
+        const commentDialog = document.getElementById('commentDialog');
+        const closeButton = document.getElementById('closeButton');
+
+    
+        commentButton.addEventListener('click', function() {
+            commentDialog.showModal();
+        });
+
+    
+        closeButton.addEventListener('click', function() {
+            commentDialog.close();
+        });
+    </script>
+</body>
+</html>
