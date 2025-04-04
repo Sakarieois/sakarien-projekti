@@ -37,3 +37,24 @@ h5, h6 {
     padding: 20px;
     margin-bottom: 20px;
  }
+ a { 
+    color: #FF5733; 
+}
+
+a:hover { 
+    color: #FF7F50; 
+}
+
+a:visited { 
+    color: #A9A9A9; 
+}
+
+
+button { 
+    background-color: #FF5733; 
+    color: #FFFFFF; 
+}
+
+button:hover { 
+    background-color: #FF7F50;
+}
