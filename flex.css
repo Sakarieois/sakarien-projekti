@@ -13,6 +13,16 @@
         padding: 10px;
         border: 2px solid black;
         background-color:white ;
+
+    }
+    .kolmas {
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        border: 2px solid black;
+        background-color:white;
+
+
     }
     .items {
         display:flex;
@@ -33,4 +43,3 @@
     height: 40px;
     object-fit: cover;
 }
-
