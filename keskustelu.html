@@ -4,134 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="jalkapallo.css">
+    <link rel="stylesheet" href="girip2.css">
     <meta name="description" content="Minun nimeni on sakarie">
     <meta name="author" content="Sakarie">
     <meta name="keywords" content="Keskustelu">
     <title>keskustelusivu</title>
 </head>
 <body>
-    <a href="index.html">cv</a> 
-    <a href="Työkokemus.html">Työkokemus</a>
-    <a href="./portfolio-sivu/portfolio.html">portfolio</a>
-
-
-
-    
-    
-    </div>
-
-     
+    <div class="container">
+        <div class="header"><h2>Sakarie jamac, tiev24n</h2></div>
+        <div class="nav"><a href="Työkokemus.html">Työkokemus</a>
+            <a href="keskustelu.html">Keskustelu</a> 
+            <a href="./portfolio-sivu/portfolio.html">portfolio</a> </div>
+            <div class="footer"><a href="https://taito.edu.turku.fi/my/">Moodle</a><br><a href="https://turku.inschool.fi/">Wilma</a><br><a href="https://tai.fi/">Tai</a></div>
+    <div class="menu"><a href="video1.html">Video</a><br><a href="flex1.html">Flex</a><br></div>
+            <div class="content"><section>
+        <h2>Keskutelu</h2>
         
-    
-        
-
-
-        </div>
-        
-        
-    
-        
-        
-        
-        
-        
-
-            
-            
-            
-            
-            
-            
-    
-
-    
-    
-    
-
-       <div>
-       <select name="" id="pet-select">
-        <label for="valitse">valitse</label>
-        <option value="voit valita"></option>
-        <option value="">kysymys </option>
-        <option value="">kommenti</option>
-        
-    </select>
-    
-    
-       </div>
-       
-       
-       
-       
-       <button type="submit">Lähetä</button>
-       <button id="commentButton">Kommentoi</button>
-
-    <dialog id="commentDialog">
-        <form method="dialog">
-            <h2>Uuden viestin luontilomake</h2>
-            <div>
-                <label for="email">Sähköposti:</label>
-                <input type="email" name="email" id="email" required>
-            </div>
-            <div>
-                <label for="birthday">Syntymäpäiväsi:</label>
-                <input type="date" name="birthday" id="birthday" required>
-            </div>
-            <legend>Hyväksytkö, että tietojasi käytetään markkinointiin?</legend>
-            <div>
-                <input type="checkbox" id="acceptMarketing">
-                <label for="acceptMarketing">Kyllä</label>
-            </div>
-            <div>
-                <input type="checkbox" id="denyMarketing">
-                <label for="denyMarketing">Ei</label>
-            </div>
-            
-            <div>
-                <label for="pet-select">Valitse kysymys tai kommentti:</label>
-                <select name="commentType" id="pet-select">
-                    <option value="">Valitse</option>
-                    <option value="kysymys">Kysymys</option>
-                    <option value="kommentti">Kommentti</option>
-                </select>
-            </div>
-            
-            <div>
-                <label for="message">Kommentoi:</label>
-                <textarea id="message" name="textarea" rows="5" cols="30" minlength="10" maxlength="200" placeholder="Kirjoita kommentti tai kysymys tähän..." required></textarea>
-            </div>
-            
-            <button type="submit">Lähetä</button>
-            <button type="button" id="closeButton">Peruuta</button>
-        </form>
-    </dialog>
-
-    <script>
-        const commentButton = document.getElementById('commentButton');
-        const commentDialog = document.getElementById('commentDialog');
-        const closeButton = document.getElementById('closeButton');
-
-    
-        commentButton.addEventListener('click', function() {
-            commentDialog.showModal();
-        });
-
-    
-        closeButton.addEventListener('click', function() {
-            commentDialog.close();
-        });
-    </script>
-</body>
-</html>
-    
-
-
-
-
-
-
-    <article><h1>Aiemmat kommentit</h1></article>
-
     <article>
 
         <h1>Kommentti</h1>
@@ -143,8 +32,8 @@
         <h1>Kellonaika</h1>
         <p>kello 16:00</p>
         
-
-    
+       
+       
         <h1>Kommenti2</h1>
         <p>mistä toi lohifile tarjous löytyy</p>
         <h1>Säköposti</h1>
@@ -154,9 +43,9 @@
         <p>27.8.2023</p>
         <h1>Kellonaika</h1>
         <p>kello 17:00</p>
-    
-
-    
+       
+       
+       
         <h1>Kommenti3</h1>
         <p>Moi toi tarjous löytyy prismalta 21,90/kg</p>
         <h1>Sähköposti</h1>
@@ -165,8 +54,8 @@
         <p>15.9.2023</p>
         <h1>Kellonaika</h1>
         <p>kello 14:00</p>
-    
-    
+       
+       
         <h1>Kommenti4</h1>
         <p>Kiitos löysin erinomainen tarjous</p>
         <h1>Sähköposti</h1>
@@ -175,9 +64,9 @@
         <p>27.9.2023</p>
         <p>kellonaika</p>
         <p>kello 17:00</p>
-    
-
-    
+       
+       
+       
         <h1>kommenti5</h1>
         <p>no moi löytyykkö toi tarjous vielä</p>
         <h1>Sähköposti</h1>
@@ -186,8 +75,8 @@
         <p>28.12.2023</p>
         <h1>kellonaika</h1>
         <p>kello 14:00</p>
-    
-    
+       
+       
         <h1>Kommenti6</h1>
         <p>Moi valittetavasti tarjousta ei ennää ole siis se lohifile tarjous</p>
         <h1>Sähköposti</h1>
@@ -196,61 +85,87 @@
         <p>12.2.2024</p>
         <h1>Kellonaika</h1>
         <p>kello 13:00</p>
-    </article>
-
-
-
-
-    </article>
-
-
-
-
-
-    </article>
-
-
-
-
-
-
-
-    </article>
-
-
-
-
-
-
-    </article>
-
-        <p></p>
-
-
-
-    </article>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    </areticle>
-
-
-
-
-    </form>
+       </article>
     
+
+
+<div>
+<select name="" id="pet-select">
+ <label for="valitse">valitse</label>
+ <option value="voit valita"></option>
+ <option value="">kysymys </option>
+ <option value="">kommenti</option>
+ 
+</select>
+
+
+</div>
+
+
+
+
+<button type="submit">Lähetä</button>
+<button id="commentButton">Kommentoi</button>
+
+<dialog id="commentDialog">
+ <form method="dialog">
+     <h2>Uuden viestin luontilomake</h2>
+     <div>
+         <label for="email">Sähköposti:</label>
+         <input type="email" name="email" id="email" required>
+     </div>
+     <div>
+         <label for="birthday">Syntymäpäiväsi:</label>
+         <input type="date" name="birthday" id="birthday" required>
+     </div>
+     <legend>Hyväksytkö, että tietojasi käytetään markkinointiin?</legend>
+     <div>
+         <input type="checkbox" id="acceptMarketing">
+         <label for="acceptMarketing">Kyllä</label>
+     </div>
+     <div>
+         <input type="checkbox" id="denyMarketing">
+         <label for="denyMarketing">Ei</label>
+     </div>
+     
+     <div>
+         <label for="pet-select">Valitse kysymys tai kommentti:</label>
+         <select name="commentType" id="pet-select">
+             <option value="">Valitse</option>
+             <option value="kysymys">Kysymys</option>
+             <option value="kommentti">Kommentti</option>
+         </select>
+     </div>
+     
+     <div>
+         <label for="message">Kommentoi:</label>
+         <textarea id="message" name="textarea" rows="5" cols="30" minlength="10" maxlength="200" placeholder="Kirjoita kommentti tai kysymys tähän..." required></textarea>
+     </div>
+     
+     <button type="submit">Lähetä</button>
+     <button type="button" id="closeButton">Peruuta</button>
+ </form>
+</dialog>
+
+<script>
+ const commentButton = document.getElementById('commentButton');
+ const commentDialog = document.getElementById('commentDialog');
+ const closeButton = document.getElementById('closeButton');
+
+
+ commentButton.addEventListener('click', function() {
+     commentDialog.showModal();
+ });
+
+
+ closeButton.addEventListener('click', function() {
+     commentDialog.close();
+
+ });
+ 
+
+</script>
+</div>
+</div>
 </body>
 </html>

@@ -2,8 +2,8 @@
   display: grid;
   grid-template-areas:
     "header header"
-    "nav"
-    "menu content"
+    "nav nav"
+    "content content"
     "footer footer";
 
   grid-template-columns: 1fr 3fr;
@@ -27,4 +27,7 @@
 }
 .container > div.footer { 
   grid-area: footer;
+}
+.container > div.nav {
+  grid-area: nav;
 }
