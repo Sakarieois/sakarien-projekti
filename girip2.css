@@ -18,6 +18,9 @@
   .container > div.header {
     grid-area: header;
     text-align: center;
+    margin: 1em 0 1em 3em;
+    padding: 0px;
+
   }
   .container > div.menu {
     grid-area: menu;
@@ -30,4 +33,5 @@
   }
   .container > div.nav {
     grid-area: nav;
+    margin: 
   }
