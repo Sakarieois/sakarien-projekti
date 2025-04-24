@@ -1,3 +1,69 @@
+@font-face {
+font-family: 'Oswald';
+src: url('Oswald-Light.ttf');
+}
+
+@font-face {
+font-family: 'National-park';
+src: url('NationalPark-Bold.ttf')
+
+}
+
+h1, h2, h3, h4, h5, h6 {
+font-family: 'Oswald', sans-serif;
+}
+
+body, p, span, div {
+    font-family: 'National-park', sans-serif;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 body { 
     background-color : #f2f2f2;
     margin-left: 64px;
