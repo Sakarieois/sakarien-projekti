@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="jalkapallo.css">
+    <link rel="stylesheet" href="../jalkapallo.css">
     <link rel="stylesheet" href="girip2.css">
-    <script src="Muuttujia ja tietotyyppejä.js" defer></script>
+    <script src="Muuttujia-ja-tietotyyppeja.js" defer></script>
     <meta name="description" content="Tervetuloa portfolion">
     <meta name="keywords" content="Portfolio">
     <meta name="author" content="Sakarie">
@@ -22,12 +22,21 @@
 <div class="menu"><a href="keskustelu.html">keskutelu</a><br><a href="video1.html">Video</a><br><a href="flex1.html">Flex</a></div>
 
 <div class="content">
+    <h2>Laskin</h2>
+    <form id="laskinForm">
+    <input type="number" id="numero1" placeholder="Ensimmäinen luku">
+    <input type="number" id="numero2" placeholder="Toinen luku">
+    <button type="button" onclick="laskin_summa()">Plus (+)</button>
+    <button type="button" onclick="laskin_vähennys()">Miinus (-)</button>
+    <button type="button" onclick="laskin_kerto()">kerto (*)</button>
+    <button type="button" onclick="laskin_jako()">jako (/)</button>
+    </form>
 
     <h1>Kyseessä on muuttujia ja tietotyyyppejä sivu</h1>
-    <button onclick="summa()">Summa</button>
-    <button onclick="vähennys()">vähennys</button>
-    <button onclick="kerto()">kerto</button>
-    <button onclick="jako()">jako</button>
+    <button onclick="summa(a, b)">Summa</button>
+    <button onclick="vähennys(b, c)">vähennys</button>
+    <button onclick="kerto(c, d)">kerto</button>
+    <button onclick="jako(d, a)">jako</button>
     
 </div>
  
