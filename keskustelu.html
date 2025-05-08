@@ -92,13 +92,8 @@
 
 
 <div>
-<select name="" id="pet-select">
- <label for="valitse">valitse</label>
- <option value="voit valita"></option>
- <option value="">kysymys </option>
- <option value="">kommenti</option>
+
  
-</select>
 
 
 </div>
@@ -144,7 +139,7 @@
          <textarea id="message" name="textarea" rows="5" cols="30" minlength="10" maxlength="200" placeholder="Kirjoita kommentti tai kysymys tähän..." required></textarea>
      </div>
      
-     <button type="submit">Lähetä</button>
+     <button onclick = "send()">Lähetä</button>
      <button type="button" id="closeButton">Peruuta</button>
  </form>
 </dialog>
