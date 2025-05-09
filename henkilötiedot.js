@@ -45,11 +45,26 @@ window.onload = function() {
             nimiTd.innerHTML = henkilo.name;
             rivi.appendChild(nimiTd);
             
+            
             const ikaTd = document.createElement("td");
+            let ikaDisplay = henkilo.age;
+            if (henkilo.age >= 18) {
+                ikaDisplay += " 🍺";
+            }
+
+            
+
+                
+            
             ikaTd.innerHTML = henkilo.age;
             rivi.appendChild(ikaTd);
             
             const työTd = document.createElement("td");
+            let tyoDisplay = henkilo.job;
+            if (henkilo.job.toLowerCase() === "opiskelija") {
+                tyoDisplay += " 🎓";
+
+            }
             työTd.innerHTML = henkilo.job;
             rivi.appendChild(työTd);
             
@@ -62,4 +77,21 @@ window.onload = function() {
     }
     
     luoRivit(); 
-}
+    
+
+
+
+
+
+ if (isNaN(ika) || ika < 0) {
+    alert("Iän pitää olla positiivinen luku");
+    return;
+} }
+
+ 
+      function lisääHenkilö() {
+        
+
+
+
+      }
