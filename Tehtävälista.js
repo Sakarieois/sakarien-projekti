@@ -27,6 +27,26 @@ function lisaa() {
   
   
   
+  function lisaaUseita() {
+    const input = document.getElementById('uusi-tehtava');
+    const maarainput = document.getElementById('lukumäärä');
+    const uusiTehtävä = input.value.trim();
+    const maara = parseInt(maarainput.value);
+
+    if (uusiTehtävä === '' || isNaN(maara) || maara <= 0) {
+      alert('Syötä tehtävä ja positiivinen numero!');
+      return;
+  }
   
+  for (let i = 0; i < maara; i++) {
+    lista.push(uusiTehtävä);
+  }
+  
+
+  paivitaLista();
+
+  input.value = '';
+  maaraInputvalue = '';
+}
 
 
