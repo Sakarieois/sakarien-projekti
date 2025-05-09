@@ -17,56 +17,6 @@ body, p, span, div {
     font-family: 'National-park', sans-serif;
 }
 
-@media (min-width: 641px) {
-    nav {
-        display: flex;
-        justify-content: space-between;
-    }
-
-    body {
-        margin-left: 64px;
-        margin-right: 64px;
-    }
-    h1 {
-        font-size: 60px;
-    }
-    h2 {
-        font-size: 48;
-    }
-    h3 {
-        font-size: 32;
-    }
-    h4 {
-        font-size: 18px;
-    }
-}
-
-@media (max-width: 640px) {
-    nav {
-        display: block;
-    }
-
-    body {
-        margin-left: 16px;
-        margin-right: 16px;
-    }
-    h1 { 
-        font-size: 32px;
-    }
-
-    h2 {
-        font-size: 26px;
-    }
-    h3 {
-        font-size: 22px;
-    }
-    h4 {
-        font-size: 18px;
-    }
-}
-
-
-
 
 
 
@@ -204,3 +154,57 @@ margin: 3em 0 3em 2em
 .footer {
 text-align:center;
 }
+
+
+@media (min-width: 641px) {
+    nav {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    body {
+        margin-left: 64px;
+        margin-right: 64px;
+    }
+    h1 {
+        font-size: 60px;
+    }
+    h2 {
+        font-size: 48;
+    }
+    h3 {
+        font-size: 32;
+    }
+    h4 {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 640px) {
+    nav ul {
+        display: block;
+        
+    }
+    .nav > a {
+        display: block;
+    }
+    body {
+        margin-left: 16px;
+        margin-right: 16px;
+    }
+    h1 { 
+        font-size: 32px;
+    }
+
+    h2 {
+        font-size: 26px;
+    }
+    h3 {
+        font-size: 22px;
+    }
+    h4 {
+        font-size: 18px;
+    }
+}
+
+
