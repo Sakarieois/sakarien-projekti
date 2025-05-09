@@ -89,9 +89,32 @@ window.onload = function() {
 } }
 
  
-      function lisääHenkilö() {
-        
+      function lisääHenkilö(pertti) {
+        pertti.preventDefault();
+        document.getElementById("lisaaBtn").onclick = function() {
+            const nimiInput = document.getElementById("nimiInput");
+            const ikaInput = document.getElementById("ikaInput");
+            const tyoInput = document.getElementById("tyoInput");
+            const korttiInput = document.getElementById("korttiInput");
+    
+            const nimi = nimiInput.value.trim();
+            const ika = parseInt(ikaInput.value);
+            const tyo = tyoInput.value.trim();
+            const ajokortti = korttiInput.checked;
+            
+            henkilot.push({
+                name: nimi,
+                age: ika,
+                job: tyo,
+                driversLicense: ajokortti
+            });
+            luoRivit();
+    
+            
+            document.getElementById("lisaaForm").reset();
+
 
 
 
       }
+    }
