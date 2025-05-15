@@ -32,14 +32,13 @@ const henkilot = [
 ];
 
 window.onload = function() {
-
     const rivit = document.getElementById("rivit");
-    
 
     function luoRivit() {
         rivit.innerHTML = ""; 
         henkilot.forEach(function(henkilo) {
             const rivi = document.createElement("tr");
+            
             
             const nimiTd = document.createElement("td");
             nimiTd.innerHTML = henkilo.name;
@@ -51,23 +50,18 @@ window.onload = function() {
             if (henkilo.age >= 18) {
                 ikaDisplay += " 🍺";
             }
-
-            
-
-                
-            
-            ikaTd.innerHTML = henkilo.age;
+            ikaTd.innerHTML = ikaDisplay;
             rivi.appendChild(ikaTd);
-            
+           
             const työTd = document.createElement("td");
             let tyoDisplay = henkilo.job;
             if (henkilo.job.toLowerCase() === "opiskelija") {
                 tyoDisplay += " 🎓";
-
             }
-            työTd.innerHTML = henkilo.job;
+            työTd.innerHTML = tyoDisplay;
             rivi.appendChild(työTd);
             
+    
             const ajokorttiTd = document.createElement("td");
             ajokorttiTd.innerHTML = henkilo.driversLicense ? "Kyllä" : "Ei";
             rivi.appendChild(ajokorttiTd);
@@ -75,46 +69,29 @@ window.onload = function() {
             rivit.appendChild(rivi);
         });
     }
+
+    luoRivit();
+
     
-    luoRivit(); 
-    
+    window.lisaaHenkilo = function() {
+        const nimi = document.getElementById("nimiInput").value.trim();
+        const ikaStr = document.getElementById("ikaInput").value.trim();
+        const tyo = document.getElementById("tyoInput").value.trim();
+        const ajokortti = document.getElementById("korttiInput").checked;
 
+        const ika = parseInt(ikaStr);
+        if (isNaN(ika) || ika < 0) {
+            alert("Iän pitää olla positiivinen luku");
+            return;
+        }
 
-
-
-
- if (isNaN(ika) || ika < 0) {
-    alert("Iän pitää olla positiivinen luku");
-    return;
-} }
-
- 
-      function lisääHenkilö(pertti) {
-        pertti.preventDefault();
-        document.getElementById("lisaaBtn").onclick = function() {
-            const nimiInput = document.getElementById("nimiInput");
-            const ikaInput = document.getElementById("ikaInput");
-            const tyoInput = document.getElementById("tyoInput");
-            const korttiInput = document.getElementById("korttiInput");
-    
-            const nimi = nimiInput.value.trim();
-            const ika = parseInt(ikaInput.value);
-            const tyo = tyoInput.value.trim();
-            const ajokortti = korttiInput.checked;
-            
-            henkilot.push({
-                name: nimi,
-                age: ika,
-                job: tyo,
-                driversLicense: ajokortti
-            });
-            luoRivit();
-    
-            
-            document.getElementById("lisaaForm").reset();
-
-
-
-
-      }
+        henkilot.push({
+            name: nimi,
+            age: ika,
+            job: tyo,
+            driversLicense: ajokortti
+        });
+        luoRivit();
+        document.getElementById("lisaaForm").reset();
     }
+}

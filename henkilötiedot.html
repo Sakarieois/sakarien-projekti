@@ -30,20 +30,13 @@
                      <tbody id="rivit"></tbody>
                      </table>
                      <h3>Lisää henkilö</h3>
-                     <form id="lisaysLomake">
-                        <label for="nimi">Nimi:</label>
-                        <input type="text" id="nimi" required />
-                        <br /><br />
-                        <label for="ika">Ikä:</label>
-                        <input type="number" id="ika" required />
-                        <br /><br />
-                        <label for="tyo">Työ:</label>
-                        <input type="text" id="työ" required />
-                        <br /><br />
-                        <label for="ajokortti>">Ajokortti:</label>
-                        <input type="checkbox" id="ajokortti" />
-                        <br /><br />
-                        <button onclick="lisaaHenkilo(event)">Lähetä</button>
+                     <form id="lisaaForm">
+  <input type="text" id="nimiInput" placeholder="Nimi" required />
+  <input type="number" id="ikaInput" placeholder="Ikä" required />
+  <input type="text" id="tyoInput" placeholder="Työ" required />
+  <input type="checkbox" id="korttiInput" /> Ajokortti
+  <button type="button" onclick="lisaaHenkilo()">Lähetä</button>
+</form>
                      </form>
              </div>
 
