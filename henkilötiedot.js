@@ -52,7 +52,8 @@ window.onload = function() {
             }
             ikaTd.innerHTML = ikaDisplay;
             rivi.appendChild(ikaTd);
-           
+            
+            
             const työTd = document.createElement("td");
             let tyoDisplay = henkilo.job;
             if (henkilo.job.toLowerCase() === "opiskelija") {
@@ -61,7 +62,7 @@ window.onload = function() {
             työTd.innerHTML = tyoDisplay;
             rivi.appendChild(työTd);
             
-    
+        
             const ajokorttiTd = document.createElement("td");
             ajokorttiTd.innerHTML = henkilo.driversLicense ? "Kyllä" : "Ei";
             rivi.appendChild(ajokorttiTd);
@@ -72,7 +73,6 @@ window.onload = function() {
 
     luoRivit();
 
-    
     window.lisaaHenkilo = function() {
         const nimi = document.getElementById("nimiInput").value.trim();
         const ikaStr = document.getElementById("ikaInput").value.trim();

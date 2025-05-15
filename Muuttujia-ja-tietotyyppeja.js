@@ -68,3 +68,18 @@ function laskin_jako() {
 
 }
 
+function naytaAika() {
+    pertti = new Date();
+    document.getElementById("päivämäärä").innerText = pertti.toLocaleDateString();
+    document.getElementById("aika").innerText = pertti.toLocaleTimeString();
+    document.getElementById("paivaJaAika").innerText = pertti.toLocaleString();
+    const viikonpaiva = ["Sunnuntai", "Maanantai", "Tiistai", "Keskiviikko", "Torstai", "Perjantai", "Launtai"];
+    document.getElementById("viikonpaiva").innerText = pertti.getDay();
+    document.getElementById("viikonpaiva").innerText = viikonpaiva[pertti.getDay()];
+    
+  
+    const kuukausi = ["Tammikuu", "helmikuu" , "maaliskuu" , "huhtikuu" , "toukokuu" , "kesäkuu" , "heinäkuu" , "elokuu" , "syyskuu" , "lokakuu" , "marraskuu" , "joulukuu"];
+    document.getElementById("kuukausi").innerText = pertti.getMonth();
+    document.getElementById("kuukausi").innerText = kuukausi[pertti.getMonth()];
+}
+
