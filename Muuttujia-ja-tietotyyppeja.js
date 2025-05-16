@@ -83,3 +83,31 @@ function naytaAika() {
     document.getElementById("kuukausi").innerText = kuukausi[pertti.getMonth()];
 }
 
+
+
+const veijoOikeudet = new Set(['luku', 'poisto']);
+const elviraOikeudet = new Set(['luku', 'kirjoitus', 'muokkaus']);
+const mehdiOikeudet = new Set(['luku', 'muokkaus', 'poisto']);
+const tuuliOikeudet = new Set(['kirjoitus', 'poisto']);
+
+
+
+function lisaaOikeudet(userSet, listId) {
+    const list = document.getElementById(listId);
+    userSet.forEach(oikeus => {
+      const li = document.createElement('li');
+      li.textContent = oikeus;
+      list.appendChild(li);
+    });
+  }
+  lisaaOikeudet(veijoOikeudet,"veijo")
+  lisaaOikeudet(elviraOikeudet,"Elvira" )
+  lisaaOikeudet(mehdiOikeudet, "Mehdi" )
+  lisaaOikeudet(tuuliOikeudet, "Tuuli")
+
+veijo = veijoOikeudet.union(tuuliOikeudet);
+lisaaOikeudet(veijo, "veijotuuli");
+lokke = mehdiOikeudet.intersection(elviraOikeudet);
+lisaaOikeudet(lokke , "mehdielvira"  );
+pertti = elviraOikeudet.difference(tuuliOikeudet);
+lisaaOikeudet(pertti, "elviratuuli");
