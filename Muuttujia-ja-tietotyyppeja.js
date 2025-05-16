@@ -68,6 +68,41 @@ function laskin_jako() {
 
 }
 
+function abs() {
+    const num = parseFloat(document.getElementById("numero1").value);
+    alert("Itseisarvo" + Math.abs(num));
+}
+function sqrt() {
+    const num = parseFloat(document.getElementById("numero1").value);
+    alert("neliöjuuri" + Math.sqrt(num));
+}
+
+
+function pow() {
+    const num1 = parseFloat(document.getElementById("numero1").value);
+    const num2 = parseFloat(document.getElementById("numero2").value);
+    alert("Potenssi: " + Math.pow(num1, num2));
+}
+
+
+function max() {
+    const num1 = parseFloat(document.getElementById("numero1").value);
+    const num2 = parseFloat(document.getElementById("numero2").value);
+    alert("Suurempi numero: " + Math.max(num1, num2));
+}
+
+function min() {
+    const num1 = parseFloat(document.getElementById("numero1").value);
+    const num2 = parseFloat(document.getElementById("numero2").value);
+    alert("Pienempi numero: " + Math.min(num1, num2));
+}
+
+function round() {
+    const num = parseFloat(document.getElementById("numero1").value);
+    alert("Pyöristetty luku: " + Math.round(num));
+}
+
+
 function naytaAika() {
     pertti = new Date();
     document.getElementById("päivämäärä").innerText = pertti.toLocaleDateString();
